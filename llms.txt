@@ -1,0 +1,18 @@
+# Arbiter — Hybrid Scheduling System
+
+> Dual nature: bare-metal virtualized hardware management (aSHARD VRAM pinning) 
+> with quantum-accelerated Kubernetes scheduling.
+
+## Features
+- VRAM pinning and management
+- Quantum-accelerated scheduling
+- Kubernetes integration
+- Hybrid cloud/edge deployment
+
+## Genesis Conductor Role
+- Resource orchestration for AI workloads
+- Part of infrastructure layer
+
+## Creator
+Igor Holt — AI Architect
+Genesis Conductor Engine
