@@ -1,9 +1,40 @@
 # ⚖️ arbiter
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![Status: Experimental](https://img.shields.io/badge/Status-Experimental-orange)
+![Project Status: Experimental - Not recommended for production use](https://img.shields.io/badge/Status-Experimental-orange)
+
+> [!CAUTION]
+> This project is currently in an **Experimental** state. It is undergoing rapid development and is not yet suitable for production environments.
 
 Dual nature—combining bare-metal virtualized hardware management (aSHARD VRAM pinning) with quantum-accelerated Kubernetes scheduling.
+
+## 🏗️ Architecture
+
+```mermaid
+graph TD
+    subgraph Cloud_Native [Cloud Native Layer]
+        K8s[Kubernetes Cluster]
+        QS[Quantum-Accelerated Scheduler]
+    end
+
+    subgraph Orchestration [Orchestration Layer]
+        Arbiter((Arbiter Core))
+    end
+
+    subgraph Infrastructure [Infrastructure Layer]
+        BM[Bare-Metal Hardware]
+        GPU[Virtualized GPU Resources]
+        VRAM[aSHARD VRAM Pinning]
+    end
+
+    K8s --> Arbiter
+    QS --> Arbiter
+    Arbiter --> BM
+    Arbiter --> GPU
+    GPU --> VRAM
+
+    style Arbiter fill:#f96,stroke-width:4px
+```
 
 ## 📖 Overview
 
