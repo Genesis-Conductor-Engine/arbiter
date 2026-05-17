@@ -1,13 +1,40 @@
 # ⚖️ arbiter
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![Status: Experimental](https://img.shields.io/badge/Status-Experimental-orange)
+[![License: MIT - Open source software license](https://img.shields.io/badge/License-MIT-yellow.svg "License: MIT")](https://opensource.org/licenses/MIT)
+![Status: Experimental - Not recommended for production use](https://img.shields.io/badge/Status-Experimental-orange "Status: Experimental")
+
+> [!CAUTION]
+> This project is currently **Experimental** and is not recommended for production use.
 
 Dual nature—combining bare-metal virtualized hardware management (aSHARD VRAM pinning) with quantum-accelerated Kubernetes scheduling.
 
 ## 📖 Overview
 
 `arbiter` is a specialized orchestration layer designed for high-performance computing environments. It bridges the gap between low-level hardware management and cloud-native scheduling, providing a unified interface for managing virtualized resources with precision.
+
+```mermaid
+graph TD
+    subgraph CloudNative [Cloud Native]
+        K8s[Kubernetes Scheduler]
+        Workloads[AI Workloads]
+    end
+
+    subgraph Orchestration [Orchestration]
+        Arbiter((Arbiter Core))
+    end
+
+    subgraph Infrastructure [Infrastructure]
+        VRAM[aSHARD VRAM Pinning]
+        Hardware[Bare-metal Virtualization]
+    end
+
+    K8s -- Quantum-accelerated Scheduling --> Arbiter
+    Arbiter -- Hardware Management --> Hardware
+    Arbiter -- Resource Pinning --> VRAM
+    Workloads -- Deploy to --> K8s
+
+    style Arbiter fill:#f96,stroke-width:4px
+```
 
 ## 🚀 Key Features
 
