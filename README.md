@@ -1,7 +1,7 @@
 # ⚖️ arbiter
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![Status: Experimental](https://img.shields.io/badge/Status-Experimental-orange)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg "License: MIT - Open source software license")](https://opensource.org/licenses/MIT)
+![Status: Experimental](https://img.shields.io/badge/Status-Experimental-orange "Project Status: Experimental - Not recommended for production")
 
 Dual nature—combining bare-metal virtualized hardware management (aSHARD VRAM pinning) with quantum-accelerated Kubernetes scheduling.
 
@@ -15,6 +15,32 @@ Dual nature—combining bare-metal virtualized hardware management (aSHARD VRAM 
 - 📍 **VRAM Optimization**: Uses aSHARD pinning to eliminate GPU memory fragmentation.
 - ⚛️ **Next-Gen Scheduling**: Leverages quantum-accelerated algorithms for complex Kubernetes workloads.
 - ⚖️ **Unified Orchestration**: A single control plane for both hardware and cluster-level operations.
+
+## 🗺️ Architecture
+
+```mermaid
+graph TD
+    subgraph CloudNative [Cloud-Native Layer]
+        K8s[Kubernetes Cluster]
+        Workloads[AI Workloads]
+    end
+
+    subgraph Orchestration [Orchestration Layer]
+        Arbiter((Arbiter Core))
+    end
+
+    subgraph Infrastructure [Infrastructure Layer]
+        BareMetal[Bare-Metal Hardware]
+        GPU[GPU / aSHARD VRAM]
+    end
+
+    K8s <--> Arbiter
+    Workloads <--> Arbiter
+    Arbiter <--> BareMetal
+    Arbiter <--> GPU
+
+    style Arbiter fill:#f96,stroke-width:4px
+```
 
 ## ⚖️ License
 
