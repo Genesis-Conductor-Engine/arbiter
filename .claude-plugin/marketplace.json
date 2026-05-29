@@ -1,0 +1,48 @@
+{
+  "$schema": "https://www.schemastore.org/schemas/json/claude-code-marketplace.json",
+  "name": "genesis-conductor-arbiter",
+  "owner": {
+    "name": "Igor Holt (@invariantx)",
+    "email": "iholt@mymail.aacc.edu",
+    "url": "https://github.com/igor-holt"
+  },
+  "description": "arbiter: Hybrid scheduling for Genesis Conductor — bare-metal VRAM pinning (aSHARD) + quantum-accelerated Kubernetes orchestration by Igor Holt (@invariantx). Unified control plane bridging low-level hardware management and cloud-native scheduling for high-performance computing environments. Features infrastructure awareness for bare-metal resources, VRAM optimization eliminating GPU memory fragmentation via aSHARD pinning, next-gen quantum-accelerated algorithms for complex K8s workloads. Experimental production-grade orchestration layer for thermodynamic AI, Yennefer/Diamond-V/GPU clusters, and autonomous agent infrastructure in the Genesis Conductor Engine. Composes with openclaw-skills (grok-persistent-state for scheduling memory, mcp-openclaw-bridge for exposing arbiter tools) and vivarium simulations for reliable multi-node agent deployments.",
+  "version": "1.0.0",
+  "homepage": "https://github.com/Genesis-Conductor-Engine/arbiter",
+  "keywords": [
+    "arbiter",
+    "genesis-conductor",
+    "igor-holt",
+    "invariantx",
+    "aSHARD",
+    "vram-pinning",
+    "kubernetes",
+    "quantum-accelerated",
+    "bare-metal",
+    "orchestration",
+    "gpu-scheduling",
+    "hpc",
+    "thermodynamic-ai",
+    "agent-infrastructure",
+    "openclaw",
+    "mcp-orchestration"
+  ],
+  "plugins": [
+    {
+      "name": "arbiter-orchestrator",
+      "source": "https://github.com/Genesis-Conductor-Engine/arbiter",
+      "description": "arbiter hybrid scheduler: aSHARD bare-metal VRAM pinning + quantum-accelerated Kubernetes for Genesis Conductor HPC/AI workloads by @invariantx. Unified orchestration for maximum performance in Yennefer GPU clusters, Diamond-V quantum ops, and multi-agent systems. Experimental but designed for production agent infrastructure requiring precise resource control and next-gen scheduling.",
+      "version": "1.0.0",
+      "tags": ["orchestration", "kubernetes", "vram", "genesis-conductor"],
+      "category": "agent-infrastructure",
+      "homepage": "https://github.com/Genesis-Conductor-Engine/arbiter",
+      "keywords": ["aSHARD vram pinning", "quantum kubernetes scheduler", "bare metal orchestration", "genesis conductor arbiter", "igor holt invariantx"]
+    }
+  ],
+  "links": {
+    "x": "https://x.com/invariantx",
+    "website": "https://genesisconductor.io",
+    "github": "https://github.com/Genesis-Conductor-Engine/arbiter",
+    "openclaw-skills-marketplace": "https://github.com/igor-holt/openclaw-skills"
+  }
+}
