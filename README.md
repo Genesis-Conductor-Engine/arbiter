@@ -15,14 +15,17 @@ Dual nature—combining bare-metal virtualized hardware management (aSHARD VRAM 
 ## 🏗️ Architecture
 
 ```mermaid
+---
+title: Arbiter System Architecture
+---
 graph TD
     subgraph CloudNative [Cloud Native Layer]
-        K8s[Kubernetes Cluster]
+        K8s([Kubernetes Cluster])
     end
 
     subgraph Orchestration [Orchestration Layer]
         Arbiter((Arbiter Core))
-        QS[Quantum Scheduler]
+        QS{{Quantum Scheduler}}
     end
 
     subgraph Infrastructure [Infrastructure Layer]
@@ -36,6 +39,9 @@ graph TD
     BM --- GPU
 
     style Arbiter fill:#f96,stroke-width:4px
+    style CloudNative stroke-dasharray: 5 5
+    style Orchestration stroke-dasharray: 5 5
+    style Infrastructure stroke-dasharray: 5 5
 ```
 
 ## 🚀 Key Features
@@ -44,6 +50,7 @@ graph TD
 - 📍 **VRAM Optimization**: Uses aSHARD pinning to eliminate GPU memory fragmentation.
 - ⚛️ **Next-Gen Scheduling**: Leverages quantum-accelerated algorithms for complex Kubernetes workloads.
 - ⚖️ **Unified Orchestration**: A single control plane for both hardware and cluster-level operations.
+- 🌐 **Hybrid Deployment**: Seamlessly operates across cloud-native and edge environments.
 
 ## 🧪 Context
 
@@ -51,4 +58,4 @@ graph TD
 
 ## ⚖️ License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE "Read the full MIT License for the arbiter project").

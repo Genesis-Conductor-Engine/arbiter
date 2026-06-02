@@ -11,3 +11,8 @@ This journal contains critical UX/accessibility learnings discovered during the 
 **Learning:** In complex orchestration projects, Mermaid diagrams benefit significantly from visual hierarchy. Distinguishing the "Core" component using specific styling (different colors, thicker borders) provides immediate cognitive relief and helps users identify the primary system anchor within multiple layers.
 
 **Action:** Use Mermaid `style` definitions and distinct node shapes (like double circles `((...))`) for primary architectural components in infrastructure documentation.
+
+## 2026-06-02 - Accessible and Theme-Resilient Diagrams
+**Learning:** Mermaid diagrams in documentation benefit from explicit titles for screen reader context and dashed subgraph borders (`stroke-dasharray`) to delineate layers. These patterns ensure diagrams remain readable and accessible regardless of the user's theme (light/dark) or assistive technology.
+
+**Action:** Include `--- title: [Context] ---` in Mermaid blocks and use dashed borders for subgraphs in infrastructure projects to improve visual and structural clarity.
