@@ -11,3 +11,8 @@ This journal contains critical UX/accessibility learnings discovered during the 
 **Learning:** In complex orchestration projects, Mermaid diagrams benefit significantly from visual hierarchy. Distinguishing the "Core" component using specific styling (different colors, thicker borders) provides immediate cognitive relief and helps users identify the primary system anchor within multiple layers.
 
 **Action:** Use Mermaid `style` definitions and distinct node shapes (like double circles `((...))`) for primary architectural components in infrastructure documentation.
+
+## 2026-05-22 - Semantic Shapes and Accessibility in Diagrams
+**Learning:** Architecture diagrams are more accessible and easier to parse when they use semantic node shapes (stadiums for workloads/clusters, hexagons for specialized logic) and explicit titles. Delineating layers with dashed borders (`stroke-dasharray`) improves visual separation between subgraphs.
+
+**Action:** Always include a `--- title: [Text] ---` in Mermaid diagrams. Use `([ ... ])` for external/user entities and `{{ ... }}` for specialized algorithms or hardware pinning logic. Apply `style [ID] stroke-dasharray: 5 5` to subgraphs representing distinct architectural layers.
