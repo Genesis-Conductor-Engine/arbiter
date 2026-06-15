@@ -11,3 +11,8 @@ This journal contains critical UX/accessibility learnings discovered during the 
 **Learning:** In complex orchestration projects, Mermaid diagrams benefit significantly from visual hierarchy. Distinguishing the "Core" component using specific styling (different colors, thicker borders) provides immediate cognitive relief and helps users identify the primary system anchor within multiple layers.
 
 **Action:** Use Mermaid `style` definitions and distinct node shapes (like double circles `((...))`) for primary architectural components in infrastructure documentation.
+
+## 2026-05-22 - Contextual Metadata in Documentation Links
+**Learning:** In technical documentation, links to external creators or parent projects benefit from explicit `title` attributes. This provides immediate context via tooltips for mouse users and enhanced descriptive metadata for screen readers, bridging the gap between a name and its specific role or relationship to the project.
+
+**Action:** Always include descriptive `title` attributes (e.g., `[Text](URL "Title Text")`) for key external references and license links in the `README.md`.
