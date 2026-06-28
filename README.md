@@ -15,27 +15,35 @@ Dual nature—combining bare-metal virtualized hardware management (aSHARD VRAM 
 ## 🏗️ Architecture
 
 ```mermaid
+--- title: Arbiter Hybrid Scheduling Architecture ---
 graph TD
     subgraph CloudNative [Cloud Native Layer]
-        K8s[Kubernetes Cluster]
+        Workloads([AI Workloads])
+        K8s([Kubernetes Cluster])
     end
 
     subgraph Orchestration [Orchestration Layer]
         Arbiter((Arbiter Core))
-        QS[Quantum Scheduler]
+        QS{{Quantum Scheduler}}
     end
 
     subgraph Infrastructure [Infrastructure Layer]
+        Pinning{{aSHARD VRAM Pinning}}
         BM[Bare Metal Hardware]
         GPU[GPU Resources]
     end
 
+    Workloads --> K8s
     K8s <--> Arbiter
     Arbiter <--> QS
-    Arbiter <--> BM
+    Arbiter <--> Pinning
+    Pinning <--> BM
     BM --- GPU
 
     style Arbiter fill:#f96,stroke-width:4px
+    style CloudNative stroke-dasharray: 5 5
+    style Orchestration stroke-dasharray: 5 5
+    style Infrastructure stroke-dasharray: 5 5
 ```
 
 ## 🚀 Key Features
@@ -47,8 +55,8 @@ graph TD
 
 ## 🧪 Context
 
-`arbiter` was created by **Igor Holt** (AI Architect) as part of the **Genesis Conductor Engine**. It serves as the resource orchestration layer for AI workloads, bridging low-level hardware management with cloud-native scheduling to ensure optimal utilization of specialized compute resources.
+`arbiter` was created by **Igor Holt** (AI Architect) as part of the [Genesis Conductor Engine](https://genesisconductor.io "Genesis Conductor Engine - Official Website"). It serves as the resource orchestration layer for AI workloads, bridging low-level hardware management with cloud-native scheduling to ensure optimal utilization of specialized compute resources.
 
 ## ⚖️ License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE "MIT License - Open source software license agreement").
