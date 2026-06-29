@@ -11,3 +11,8 @@ This journal contains critical UX/accessibility learnings discovered during the 
 **Learning:** In complex orchestration projects, Mermaid diagrams benefit significantly from visual hierarchy. Distinguishing the "Core" component using specific styling (different colors, thicker borders) provides immediate cognitive relief and helps users identify the primary system anchor within multiple layers.
 
 **Action:** Use Mermaid `style` definitions and distinct node shapes (like double circles `((...))`) for primary architectural components in infrastructure documentation.
+
+## 2026-05-22 - Semantic Shapes in Architecture Diagrams
+**Learning:** Using semantic Mermaid shapes—stadiums `([ ... ])` for cloud-native workloads and hexagons `{{ ... }}` for specialized schedulers or hardware interfaces—provides instant visual categorization. This, combined with dashed subgraph borders, helps users cognitively separate different system layers (Cloud Native, Orchestration, Infrastructure) at a glance.
+
+**Action:** Standardize node shapes and apply dashed subgraph borders in Mermaid architecture diagrams to delineate architectural layers and component types clearly.
