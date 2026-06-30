@@ -11,3 +11,8 @@ This journal contains critical UX/accessibility learnings discovered during the 
 **Learning:** In complex orchestration projects, Mermaid diagrams benefit significantly from visual hierarchy. Distinguishing the "Core" component using specific styling (different colors, thicker borders) provides immediate cognitive relief and helps users identify the primary system anchor within multiple layers.
 
 **Action:** Use Mermaid `style` definitions and distinct node shapes (like double circles `((...))`) for primary architectural components in infrastructure documentation.
+
+## 2026-05-22 - Subgraph Delineation for Layered Architectures
+**Learning:** For accessible and theme-resilient Mermaid diagrams, including explicit titles using `--- title: [Text] ---` and applying dashed subgraph borders using `style <ID> stroke-dasharray: 5 5` helps delineate architectural layers (e.g., CloudNative, Orchestration, Infrastructure) without relying solely on color-coded fills which can be problematic for color-blind users or varying IDE themes.
+
+**Action:** Always include a title in Mermaid diagrams and use dashed borders for subgraphs to provide a clear, high-contrast visual boundary between different system layers.
